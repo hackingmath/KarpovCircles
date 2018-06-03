@@ -17,13 +17,18 @@ def draw():
     rotate(-PI/2)
     while n_sides > 2:
         fill(255)
+        #this coloring scheme didn't work out
+        #f = map(n_sides,300,3,0,200)
+        #fill(f,255,255)
         #fill(255-(40*n_sides-20),255,255) #rainbow polygons
         beginShape()
         for n in range(n_sides):
+            
             angle = 2*n*PI/n_sides
             vertex(new_r*cos(angle),
                    new_r*sin(angle))
             #rotate()
+            
         endShape(CLOSE)
         #println(new_r)
         new_r = new_r * cos(PI/n_sides)
